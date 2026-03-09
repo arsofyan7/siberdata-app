@@ -1,66 +1,93 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
+  <img src="public/images/hero1.png" alt="LSP Siberdata Hero" width="100%" />
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+  # 🛡️ LSP Siberdata - Sertifikasi Profesi Keamanan Siber & PDP
 
-## About Laravel
+  **Validasi keahlian Anda melalui uji kompetensi berstandar nasional bersama Lembaga Sertifikasi Profesi Siberdata.**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+  [![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
+  [![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D)](https://vuejs.org/)
+  [![Inertia.js](https://img.shields.io/badge/Inertia.js-9553E9?style=for-the-badge&logo=inertia&logoColor=white)](https://inertiajs.com/)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+  [![Filament](https://img.shields.io/badge/Filament-EAB308?style=for-the-badge&logo=filament&logoColor=white)](https://filamentphp.com/)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+</div>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 📖 Tentang Aplikasi
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Aplikasi ini adalah platform portal sistem informasi untuk **LSP Siberdata**, sebuah lembaga sertifikasi profesi yang fokus pada bidang **Keamanan Siber (Cyber Security)** dan **Pelindungan Data Pribadi (PDP)** di Indonesia.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Platform ini memfasilitasi asesi (peserta) untuk melihat detail skema sertifikasi, melakukan pendaftaran, dan bagi admin/asesor untuk mengelola skema, asesmen, dan data pengguna melalui dashboard yang canggih.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### ✨ Fitur Utama
+- **Landing Page Interaktif**: Desain UI modern dengan efek glassmorphism dan carousel dinamis.
+- **Katalog Skema Sertifikasi**: Fitur pencarian dan filter skema (Cyber & PDP) yang intuitif.
+- **Detail Skema Komprehensif**: Informasi profil, tugas, prasyarat, kompetensi, dan jenjang karir tiap skema.
+- **Tampilan "Tentang Kami" yang Profesional**: Menyajikan Visi, Misi, *Core Values* (SIBER), dan detail lokasi institusi.
+- **Admin Dashboard Terintegrasi**: Menggunakan **Filament v3** untuk manajemen Master Data Skema, Dokumen, Riwayat Sertifikasi, dan *Advanced Statistics Widget*.
 
-## Laravel Sponsors
+## 🚀 Teknologi yang Digunakan
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **Backend:** [Laravel 10](https://laravel.com)
+- **Frontend:** [Vue 3](https://vuejs.org/) (Composition API) + [Inertia.js](https://inertiajs.com/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Icons:** [Lucide Icons](https://lucide.dev/) (lucide-vue-next)
+- **Admin Panel:** [Filament PHP v3](https://filamentphp.com/)
 
-### Premium Partners
+## 🛠️ Instalasi & Persiapan
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+1. **Clone repository ini** (jika ada remote) atau masuk ke direktori proyek lokal.
+2. **Install dependensi PHP dan Node.js:**
+   ```bash
+   composer install
+   npm install
+   ```
+3. **Konfigurasi Environment:**
+   Salin `.env.example` ke `.env` dan atur koneksi database Anda.
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+4. **Jalankan Migrasi & Database Seeder:**
+   (Pastikan Anda telah membuat database yang didefinisikan di `.env`).
+   ```bash
+   php artisan migrate --seed
+   ```
+   *Seeder (seperti `DatabaseSeeder`, `SchemeSeeder`) akan memasukkan data admin default dan master data skema secara otomatis.*
 
-## Contributing
+5. **Kompilasi Aset Frontend:**
+   ```bash
+   npm run build
+   # atau untuk mode development: npm run dev
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+6. **Jalankan Server Lokal:**
+   ```bash
+   php artisan serve
+   ```
+   Aplikasi dapat diakses di `http://127.0.0.1:8000`.
 
-## Code of Conduct
+## 🔑 Akses Sistem
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+| Role | Path Akses | Keterangan |
+|------|------------|------------|
+| **Publik** | `/` | Halaman utama pengunjung (Portal Informasi) |
+| **Publik** | `/skema` | Katalog lengkap skema sertifikasi |
+| **Admin** | `/admin` | Portal Filament Admin (mengelola data) |
+| **Asesi / User** | `/dashboard` | Portal Asesi pribadi (Inertia Dashboard) |
 
-## Security Vulnerabilities
+## 🌟 Core Values (SIBER)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- **S**inergi: Kolaborasi kuat dengan pemangku kepentingan keamanan siber.
+- **I**ntegritas: Kejujuran dan etika tinggi dalam asesmen.
+- **B**erstandar: Patuh pada regulasi BNSP dan standar teknis.
+- **E**xpertise: Didorong oleh keahlian mendalam di dunia privasi.
+- **R**esponsif: Cepat tanggap terhadap ancaman siber baru.
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<div align="center">
+  <i>&copy; 2026 LSP Siberdata. Terakreditasi Nasional.</i>
+</div>

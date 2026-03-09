@@ -13,6 +13,14 @@ import {
     X
 } from 'lucide-vue-next';
 import CarouselBackground from '@/Components/CarouselBackground.vue';
+import { Toaster, toast } from 'vue-sonner';
+
+const handleDaftarClick = () => {
+    toast.info('Fitur pendaftaran segera hadir!', {
+        description: 'Kami sedang mempersiapkan sistem akademik.',
+        icon: '🚀'
+    });
+};
 
 const props = defineProps({
     canLogin: Boolean,
@@ -40,6 +48,7 @@ const tabs = [
     <div class="min-h-screen bg-slate-50 font-sans text-slate-900 pb-20 relative overflow-hidden selection:bg-blue-500 selection:text-white">
         
         <CarouselBackground />
+        <Toaster position="top-right" richColors />
 
         <!-- Navbar -->
         <nav class="relative z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 transition-all duration-300">
@@ -334,13 +343,13 @@ const tabs = [
                         </div>
 
                         <!-- CTA Button -->
-                        <Link
-                            :href="route('register')"
+                        <button
+                            @click="handleDaftarClick"
                             class="w-full justify-center inline-flex items-center px-6 py-4 border border-transparent text-base font-bold rounded-xl text-white shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5"
                             :class="isCyber ? 'bg-indigo-600 hover:bg-indigo-700 shadow-indigo-500/30' : 'bg-emerald-600 hover:bg-emerald-700 shadow-emerald-500/30'"
                         >
                             Daftar Sertifikasi Sekarang
-                        </Link>
+                        </button>
                         
                         <p class="mt-4 text-xs text-slate-400 flex items-center justify-center">
                             <LockKeyhole class="w-3 h-3 mr-1" /> Transaksi aman melalui Portal Asesi

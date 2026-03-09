@@ -1,8 +1,9 @@
 <script setup>
 import { Head, Link } from '@inertiajs/vue3';
 import { ShieldCheck, LockKeyhole, ArrowRight, UserCircle, ServerCog, Search, Inbox } from 'lucide-vue-next';
-import { ref, computed } from 'vue';
+import { ref, computed, watch, onMounted } from 'vue';
 import CarouselBackground from '@/Components/CarouselBackground.vue';
+import SchemeCardSkeleton from '@/Components/SchemeCardSkeleton.vue';
 
 
 const props = defineProps({
@@ -37,6 +38,19 @@ const filteredSchemes = computed(() => {
         const matchesSearch = scheme.name.toLowerCase().includes(query) || scheme.code.toLowerCase().includes(query);
         return matchesCategory && matchesSearch;
     });
+});
+
+const isLoading = ref(true);
+
+onMounted(() => {
+    setTimeout(() => { isLoading.value = false; }, 600);
+});
+
+watch([searchQuery, selectedCategory], () => {
+    isLoading.value = true;
+    setTimeout(() => {
+        isLoading.value = false;
+    }, 400);
 });
 </script>
 
@@ -181,11 +195,28 @@ const filteredSchemes = computed(() => {
                     </div>
                 </div>
 
+                <!-- Skeleton Loading State -->
+                <div v-if="isLoading" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                    <SchemeCardSkeleton v-for="i in 6" :key="`skeleton-${i}`" />
+                </div>
+
                 <!-- Schemes Grid -->
-                <div v-if="filteredSchemes.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-                    <div v-for="scheme in filteredSchemes" :key="scheme.id" 
-                         class="bg-white rounded-2xl shadow-sm hover:shadow-xl border overflow-hidden transition-all duration-300 transform hover:-translate-y-1 group flex flex-col h-full relative"
-                         :class="scheme.category === 'cyber' ? 'border-indigo-100/50 hover:shadow-indigo-500/10' : 'border-emerald-100/50 hover:shadow-emerald-500/10'">
+                <TransitionGroup 
+                    v-else-if="filteredSchemes.length > 0" 
+                    tag="div"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 relative"
+                    enter-active-class="transition-all duration-500 ease-out"
+                    enter-from-class="opacity-0 translate-y-8"
+                    enter-to-class="opacity-100 translate-y-0"
+                    leave-active-class="transition-all duration-300 ease-in absolute w-full"
+                    leave-from-class="opacity-100 scale-100"
+                    leave-to-class="opacity-0 scale-95"
+                    move-class="transition-transform duration-500"
+                >
+                    <div v-for="(scheme, index) in filteredSchemes" :key="scheme.id" 
+                         :style="{ transitionDelay: (index * 50) + 'ms' }"
+                         class="bg-white rounded-2xl shadow-sm hover:shadow-xl border overflow-hidden transition-all duration-300 transform hover:scale-[1.02] group flex flex-col h-full relative"
+                         :class="scheme.category === 'cyber' ? 'border-indigo-100 hover:border-indigo-300 hover:shadow-indigo-500/20' : 'border-emerald-100 hover:border-emerald-300 hover:shadow-emerald-500/20'">
                         
                         <div class="absolute top-0 right-0 w-24 h-24 rounded-bl-3xl opacity-50 transition-opacity pointer-events-none"
                              :class="scheme.category === 'cyber' ? 'bg-gradient-to-bl from-indigo-50 to-transparent group-hover:opacity-100' : 'bg-gradient-to-bl from-emerald-50 to-transparent group-hover:opacity-100'"></div>
@@ -227,7 +258,7 @@ const filteredSchemes = computed(() => {
                             </Link>
                         </div>
                     </div>
-                </div>
+                </TransitionGroup>
 
                 <!-- Empty State -->
                 <div v-else class="flex flex-col items-center justify-center py-16 px-4 text-center bg-white rounded-3xl border border-dashed border-slate-300">

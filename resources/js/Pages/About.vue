@@ -14,7 +14,7 @@ import {
     Mail,
     Phone
 } from 'lucide-vue-next';
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import CarouselBackground from '@/Components/CarouselBackground.vue';
 
 const props = defineProps({
@@ -22,9 +22,48 @@ const props = defineProps({
     canRegister: Boolean,
     laravelVersion: String,
     phpVersion: String,
+    settings: {
+        type: Object,
+        default: () => ({})
+    }
 });
 
 const isMobileMenuOpen = ref(false);
+
+const visi = computed(() => props.settings?.visi || 'Menjadi lembaga sertifikasi profesi terkemuka dan terpercaya dalam mencetak SDM unggul yang kompeten di bidang keamanan siber dan pelindungan data pribadi untuk mendukung ketahanan digital Indonesia.');
+
+const misiHtml = computed(() => {
+    return props.settings?.misi || `
+        <ul>
+            <li>Melaksanakan sertifikasi kompetensi sesuai standar nasional (SKKNI) dan internasional.</li>
+            <li>Menjamin mutu asesmen dengan asesor profesional dan independen.</li>
+            <li>Membangun kemitraan dengan industri dan pemerintah.</li>
+            <li>Menyelenggarakan tata kelola lembaga yang transparan dan akuntabel.</li>
+        </ul>
+    `;
+});
+
+const getIcon = (letter) => {
+    switch(letter) {
+        case 'S': return Users;
+        case 'I': return Shield;
+        case 'B': return Award;
+        case 'E': return Lightbulb;
+        case 'R': return Zap;
+        default: return ShieldCheck;
+    }
+};
+
+const getColor = (letter) => {
+    switch(letter) {
+        case 'S': return 'text-indigo-600 bg-indigo-100';
+        case 'I': return 'text-emerald-600 bg-emerald-100';
+        case 'B': return 'text-blue-600 bg-blue-100';
+        case 'E': return 'text-amber-600 bg-amber-100';
+        case 'R': return 'text-red-600 bg-red-100';
+        default: return 'text-slate-600 bg-slate-100';
+    }
+};
 
 const coreValues = [
     {
@@ -181,7 +220,7 @@ const coreValues = [
                                 Terkemuka & Terpercaya
                             </h2>
                             <p class="text-lg text-slate-600 leading-relaxed font-medium">
-                                "Menjadi lembaga sertifikasi profesi terkemuka dan terpercaya dalam mencetak SDM unggul yang kompeten di bidang keamanan siber dan pelindungan data pribadi untuk mendukung ketahanan digital Indonesia."
+                                "{{ visi }}"
                             </p>
                         </div>
 
@@ -190,32 +229,9 @@ const coreValues = [
                             <div class="inline-flex items-center justify-center px-4 py-1.5 rounded-full text-sm font-bold text-emerald-700 bg-emerald-100 mb-6">
                                 MISI KAMI
                             </div>
-                            <ul class="space-y-6">
-                                <li class="flex items-start">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 text-slate-700 font-bold flex items-center justify-center mr-4 mt-1">
-                                        1
-                                    </div>
-                                    <p class="text-slate-700 font-medium">Melaksanakan sertifikasi kompetensi sesuai standar nasional (SKKNI) dan internasional.</p>
-                                </li>
-                                <li class="flex items-start">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 text-slate-700 font-bold flex items-center justify-center mr-4 mt-1">
-                                        2
-                                    </div>
-                                    <p class="text-slate-700 font-medium">Menjamin mutu asesmen dengan asesor profesional dan independen.</p>
-                                </li>
-                                <li class="flex items-start">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 text-slate-700 font-bold flex items-center justify-center mr-4 mt-1">
-                                        3
-                                    </div>
-                                    <p class="text-slate-700 font-medium">Membangun kemitraan dengan industri dan pemerintah.</p>
-                                </li>
-                                <li class="flex items-start">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 text-slate-700 font-bold flex items-center justify-center mr-4 mt-1">
-                                        4
-                                    </div>
-                                    <p class="text-slate-700 font-medium">Menyelenggarakan tata kelola lembaga yang transparan dan akuntabel.</p>
-                                </li>
-                            </ul>
+                            <!-- Misi using v-html -->
+                            <div class="prose prose-slate max-w-none prose-ul:space-y-4 prose-li:text-slate-700 prose-li:font-medium marker:text-emerald-600" v-html="misiHtml">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -260,7 +276,7 @@ const coreValues = [
                                     <MapPin class="w-6 h-6 text-emerald-400" />
                                 </div>
                                 <h4 class="font-bold text-lg mb-2">Kantor Pusat</h4>
-                                <p class="text-sm text-indigo-100 leading-relaxed">Jalan Banda No. 30,<br/>Kota Bandung, Jawa Barat</p>
+                                <p class="text-sm text-indigo-100 leading-relaxed">{{ settings?.alamat || 'Jalan Banda No. 30, Kota Bandung, Jawa Barat' }}</p>
                             </div>
 
                             <!-- Phone -->
@@ -269,7 +285,7 @@ const coreValues = [
                                     <Phone class="w-6 h-6 text-blue-400" />
                                 </div>
                                 <h4 class="font-bold text-lg mb-2">Telepon / WhatsApp</h4>
-                                <a href="tel:+6285189998970" class="text-sm text-indigo-100 hover:text-white transition-colors">+62 851-8999-8970</a>
+                                <a :href="'tel:' + (settings?.kontak || '+6285189998970')" class="text-sm text-indigo-100 hover:text-white transition-colors">{{ settings?.kontak || '+62 851-8999-8970' }}</a>
                             </div>
 
                             <!-- Email -->
@@ -278,7 +294,7 @@ const coreValues = [
                                     <Mail class="w-6 h-6 text-indigo-400" />
                                 </div>
                                 <h4 class="font-bold text-lg mb-2">Email Layanan</h4>
-                                <a href="mailto:lspsiberdata@gmail.com" class="text-sm text-indigo-100 hover:text-white transition-colors">lspsiberdata@gmail.com</a>
+                                <a :href="'mailto:' + (settings?.email || 'lspsiberdata@gmail.com')" class="text-sm text-indigo-100 hover:text-white transition-colors">{{ settings?.email || 'lspsiberdata@gmail.com' }}</a>
                             </div>
                         </div>
                     </div>

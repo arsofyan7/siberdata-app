@@ -6,25 +6,16 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Scheme extends Model
+class Setting extends Model
 {
     use HasFactory, HasUuids;
 
-    public $incrementing = false;
-    protected $keyType = 'string';
-
     protected $fillable = [
-        'name',
-        'code',
-        'category',
-        'level',
-        'description',
-        'is_active',
-        'slug',
-        'details',
+        'key',
+        'value'
     ];
 
     protected $casts = [
-        'details' => 'array',
+        'value' => 'json',
     ];
 }

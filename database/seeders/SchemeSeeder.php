@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Scheme;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 
 class SchemeSeeder extends Seeder
 {
@@ -13,6 +14,8 @@ class SchemeSeeder extends Seeder
      */
     public function run(): void
     {
+        Scheme::truncate();
+
         $schemes = [
             // PDP
             ['category' => 'pdp', 'level' => 8, 'name' => 'Pejabat Pengawas PDP/ PPDP (DPO)', 'code' => 'SKM-PDP-001'],
@@ -32,13 +35,34 @@ class SchemeSeeder extends Seeder
             ['category' => 'cyber', 'level' => 5, 'name' => 'Penguji Keamanan Siber (Penetration Tester)', 'code' => 'SKM-CYB-007'],
         ];
 
+        $jsonPath = base_path('JSON Detil Skema .txt');
+        $jsonData = [];
+
+        if (File::exists($jsonPath)) {
+            $parsed = json_decode(File::get($jsonPath), true);
+            if (isset($parsed['schemes'])) {
+                $jsonData = $parsed['schemes'];
+            }
+        }
+
         foreach ($schemes as $scheme) {
+            $details = null;
+
+            // Cari details yg cocok buat skema ini
+            foreach ($jsonData as $item) {
+                if ($item['code'] === $scheme['code']) {
+                    $details = $item['details'];
+                    break;
+                }
+            }
+
             Scheme::create([
                 'name' => $scheme['name'],
                 'slug' => Str::slug($scheme['name']),
                 'code' => $scheme['code'],
                 'category' => $scheme['category'],
                 'level' => $scheme['level'],
+                'details' => $details,
             ]);
         }
     }

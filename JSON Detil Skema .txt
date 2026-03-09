@@ -1,0 +1,730 @@
+{
+  "schemes": [
+    {
+      "code": "SKM-PDP-001",
+      "name": "Pejabat Pengawas PDP/ PPDP (DPO)",
+      "category": "pdp",
+      "level": 8,
+      "details": {
+        "definisi": "Personel tingkat manajerial yang bertanggung jawab atas pengawasan kepatuhan tata kelola data pribadi sesuai UU PDP.",
+        "kualifikasi": "Minimal S1 (Teknologi Informasi/Hukum/Manajemen) dengan pengalaman kerja relevan minimal 5 tahun.",
+        "lingkup_bidang": "Manajemen risiko privasi, kepatuhan regulasi, dan hubungan kelembagaan otoritas PDP.",
+        "profil": "High-level Strategist, Ahli Kepatuhan, dan Penasihat Independen organisasi.",
+        "tanggung_jawab": "Memastikan integritas pemrosesan data pribadi dan mitigasi risiko kegagalan data tingkat tinggi.",
+        "wewenang": "Mengakses seluruh sistem informasi untuk audit dan memberikan instruksi penghentian proses data ilegal.",
+        "persyaratan": "Bukti pelatihan DPO, Portofolio Dokumen DPIA, CV, Ijazah, KTP.",
+        "tugas": [
+          "Menentukan landasan dan struktur tim PDP",
+          "Menentukan strategi PDP organisasi",
+          "Memastikan manajemen respons insiden"
+        ],
+        "jenjang_karier": "DPO Senior, Chief Data Officer, Privacy Director.",
+        "sertifikasi": "Sertifikasi Kompetensi BNSP - Pejabat Pengawas PDP.",
+        "verifikasi": "Verifikasi Portofolio dan Uji Kompetensi Lisan/Tulis."
+      }
+    },
+    {
+      "code": "SKM-PDP-002",
+      "name": "Pejabat Pelaksana PDP (Data Protection Executive)",
+      "category": "pdp",
+      "level": 8,
+      "details": {
+        "definisi": "Tenaga ahli yang melaksanakan operasional pelindungan data pribadi secara teknis dan manajerial.",
+        "kualifikasi": "Minimal S1 dengan sertifikasi pelatihan teknis PDP.",
+        "lingkup_bidang": "Implementasi teknis privasi, kontrol data, dan operasional kepatuhan.",
+        "profil": "Technical Privacy Specialist, Implementer Kepatuhan Data.",
+        "tanggung_jawab": "Menerapkan kontrol keamanan pada siklus hidup data pribadi.",
+        "wewenang": "Mengusulkan kontrol teknis keamanan data dan mengelola sistem manajemen privasi.",
+        "persyaratan": "Logbook implementasi privasi, Sertifikat Pelatihan, KTP, Ijazah.",
+        "tugas": [
+          "Menerapkan program kerja PDP",
+          "Merumuskan proses perolehan persetujuan pemrosesan",
+          "Mengelola audit berkala"
+        ],
+        "jenjang_karier": "Senior Privacy Executive, DPO.",
+        "sertifikasi": "Sertifikasi Kompetensi BNSP - Pejabat Pelaksana PDP.",
+        "verifikasi": "Observasi tempat kerja atau Demonstrasi simulasi."
+      }
+    },
+    {
+      "code": "SKM-PDP-003",
+      "name": "Manajer Operasional PDP",
+      "category": "pdp",
+      "level": 7,
+      "details": {
+        "definisi": "Manajer yang mengoordinasikan aspek harian operasional perlindungan data pribadi.",
+        "kualifikasi": "S1 dengan pengalaman manajerial minimal 3 tahun di bidang IT/Kepatuhan.",
+        "lingkup_bidang": "Operasional harian tim PDP dan pemantauan kepatuhan.",
+        "profil": "Managerial Leader dengan pemahaman teknis regulasi data.",
+        "tanggung_jawab": "Mengelola sumber daya dan tim untuk memastikan kepatuhan berkelanjutan.",
+        "wewenang": "Menyetujui prosedur operasional standar (SOP) terkait data pribadi.",
+        "persyaratan": "Laporan kerja manajerial, Sertifikat Pelatihan Manajer PDP.",
+        "tugas": [
+          "Mengelola tim operasional PDP",
+          "Memantau kepatuhan terhadap regulasi",
+          "Memastikan respons insiden"
+        ],
+        "jenjang_karier": "Privacy Manager, Head of Compliance.",
+        "sertifikasi": "Sertifikasi Kompetensi BNSP - Manajer Operasional PDP.",
+        "verifikasi": "Wawancara dan Verifikasi bukti kerja."
+      }
+    },
+    {
+      "code": "SKM-PDP-004",
+      "name": "Pelaksana Kepatuhan PDP (PDP Compliance)",
+      "category": "pdp",
+      "level": 6,
+      "details": {
+        "definisi": "Staf yang bertugas mengidentifikasi dan memantau aspek kepatuhan hukum data pribadi.",
+        "kualifikasi": "D3/S1 Hukum atau IT.",
+        "lingkup_bidang": "Administrasi kepatuhan, pemetaan regulasi, dan dokumentasi.",
+        "profil": "Compliance Analyst, Regulatory Officer.",
+        "tanggung_jawab": "Melakukan inventarisasi regulasi dan memastikan dokumentasi kepatuhan tersedia.",
+        "wewenang": "Memberikan rekomendasi administratif terkait celah kepatuhan.",
+        "persyaratan": "Daftar ceklis kepatuhan, Portofolio pemetaan regulasi.",
+        "tugas": [
+          "Mengidentifikasi peraturan perundang-undangan terkait",
+          "Menyusun tata kelola PDP",
+          "Memantau program kerja"
+        ],
+        "jenjang_karier": "Senior Compliance, Privacy Manager.",
+        "sertifikasi": "Sertifikasi Kompetensi BNSP - Pelaksana Kepatuhan PDP.",
+        "verifikasi": "Tes tertulis dan verifikasi dokumen."
+      }
+    },
+    {
+      "code": "SKM-PDP-005",
+      "name": "Auditor PDP",
+      "category": "pdp",
+      "level": 6,
+      "details": {
+        "definisi": "Personel yang melakukan audit independen terhadap sistem manajemen PDP.",
+        "kualifikasi": "D3/S1 dengan sertifikasi auditor.",
+        "lingkup_bidang": "Audit sistem, pengujian kontrol, dan pelaporan temuan.",
+        "profil": "Internal/External Auditor, Privacy Auditor.",
+        "tanggung_jawab": "Menyusun laporan hasil audit dan rekomendasi perbaikan.",
+        "wewenang": "Menguji efektivitas kontrol keamanan dan mengakses log aktivitas data.",
+        "persyaratan": "Contoh Laporan Audit, Sertifikat Auditor.",
+        "tugas": [
+          "Mengelola audit program kerja PDP",
+          "Menguji efektivitas program kerja",
+          "Menyusun laporan hasil audit"
+        ],
+        "jenjang_karier": "Senior Auditor, Audit Lead.",
+        "sertifikasi": "Sertifikasi Kompetensi BNSP - Auditor PDP.",
+        "verifikasi": "Verifikasi bukti portofolio laporan audit."
+      }
+    },
+    {
+      "code": "SKM-PDP-006",
+      "name": "Analis Risiko PDP",
+      "category": "pdp",
+      "level": 6,
+      "details": {
+        "definisi": "Personel yang berfokus pada penilaian dampak dan mitigasi risiko pemrosesan data.",
+        "kualifikasi": "D3/S1 IT atau Manajemen Risiko.",
+        "lingkup_bidang": "Analisis dampak privasi (DPIA) dan manajemen risiko.",
+        "profil": "Risk Analyst, Data Privacy Analyst.",
+        "tanggung_jawab": "Mengidentifikasi ancaman terhadap privasi data dan memberikan saran mitigasi.",
+        "wewenang": "Menilai tingkat risiko pada proyek/sistem baru yang memproses data pribadi.",
+        "persyaratan": "Contoh Dokumen DPIA/Analisis Risiko.",
+        "tugas": [
+          "Menyusun kriteria matriks risiko PDP",
+          "Melakukan Penilaian Dampak PDP (DPIA)",
+          "Menangani analisis manajemen risiko"
+        ],
+        "jenjang_karier": "Senior Risk Analyst, Risk Manager.",
+        "sertifikasi": "Sertifikasi Kompetensi BNSP - Analis Risiko PDP.",
+        "verifikasi": "Uji kompetensi studi kasus."
+      }
+    },
+    {
+      "code": "SKM-CYB-001",
+      "name": "Pelaksana Kamsi (Junior InfoSec)",
+      "category": "cyber",
+      "level": 5,
+      "details": {
+        "definisi": "Orang yang memiliki kemampuan menyelesaikan pekerjaan berlingkup luas di bidang keamanan informasi, memilih metode pengamanan informasi yang sesuai dari beragam pilihan yang sudah maupun belum baku dengan menganalisis data, menunjukkan kinerja dengan mutu dan kuantitas yang terukur; menguasai konsep teoritis bidang keamanan informasi secara umum, mampu memformulasikan penyelesaian masalah keamanan informasi secara prosedural, mampu menyusun laporan tertulis secara komprehensif; dan bertanggung jawab pada pekerjaan sendiri dan dapat diberi tanggung jawab atas pencapaian hasil kerja kelompok.",
+        "kualifikasi": "Level 5",
+        "lingkup_bidang": "Melaksanakan pekerjaan bidang keamanan informasi secara umum",
+        "profil": [
+          "Cermat dalam mengidentifikasi klasifikasi informasi berdasarkan kebutuhan keamanan informasi",
+          "Cermat dalam mengidentifikasi metode pengamanan integritas informasi yang sesuai dengan tingkat kepentingan informasi",
+          "Tepat dalam menentukan metode validasi integritas informasi berdasarkan praktik terbaik keamanan informasi",
+          "Sistematis dalam membuat rencana pelaksanaan keberlangsungan keamanan informasi sesuai dengan daftar kesiapan TIK di organisasi",
+          "Tepat dalam memilih metode autentikasi berdasarkan praktik terbaik keamanan informasi dan hasil identifikasi risiko pada transmisi, pesan atau sumber aslinya"
+        ],
+        "tanggung_jawab": [
+          "Membuat kategori klasifikasi informasi",
+          "Mendata informasi yang bersifat rahasia",
+          "Menentukan tingkat kepentingan informasi",
+          "Menentukan metode pengamanan Integritas informasi",
+          "Mengidentifikasi ancaman terhadap Integritas informasi",
+          "Mengidentifikasi metode validasi Integritas informasi",
+          "Mendokumentasikan hasil validasi Integritas informasi",
+          "Menyusun daftar kesiapan TIK untuk keberlangsungan bisnis",
+          "Melakukan pengamanan Ketersediaan",
+          "Mengidentifikasi risiko pada transmisi, pesan atau sumber aslinya",
+          "Menentukan metode Autentikasi yang akan digunakan untuk validasi transmisi, pesan atau sumber aslinya yang terpercaya"
+        ],
+        "wewenang": [
+          "Memformulasikan penyelesaian masalah dalam pelaksanaan prosedur Keamanan Informasi"
+        ],
+        "persyaratan": [
+          "Memiliki pengalaman di bidang Keamanan Informasi sekurang-kurangnya 1 tahun."
+        ],
+        "jenjang_karier": "Analis Keamanan Informasi (Information Security Analyst) - TIK.SEC0613",
+        "tugas_utama": [
+          {
+            "deskripsi": "Mengklasifikasikan Informasi yang Bersifat Rahasia",
+            "kode_skkni": "J.62KAM00.001.2 (SKKNI 2024-191)"
+          },
+          {
+            "deskripsi": "Melaksanakan Pengamanan Integritas Informasi",
+            "kode_skkni": "J.62KAM00.003.2 (SKKNI 2024-191)"
+          },
+          {
+            "deskripsi": "Melaksanakan Validasi Integritas Informasi",
+            "kode_skkni": "J.62KAM00.004.2 (SKKNI 2024-191)"
+          },
+          {
+            "deskripsi": "Melaksanakan Keberlangsungan Keamanan Informasi",
+            "kode_skkni": "J.62KAM00.005.1 (SKKNI 2024-191)"
+          },
+          {
+            "deskripsi": "Menetapkan Metode Autentikasi",
+            "kode_skkni": "J.62KAM00.007.1 (SKKNI 2024-191)"
+          }
+        ],
+        "tugas_khusus": [
+          {
+            "deskripsi": "Melaksanakan Pengamanan Informasi yang Bersifat Rahasia",
+            "kode_skkni": "J.62KAM00.002.1 (SKKNI 2024-191)"
+          },
+          {
+            "deskripsi": "Mengimplementasikan Penyediaan Fasilitas Pemrosesan Informasi dengan Redundansi yang sesuai",
+            "kode_skkni": "J.62KAM00.006.2 (SKKNI 2024-191)"
+          }
+        ],
+        "sertifikasi": "-",
+        "verifikasi": "Badan Siber dan Sandi Negara"
+      }
+    },
+    {
+      "code": "SKM-CYB-002",
+      "name": "Auditor Keamanan Informasi",
+      "category": "cyber",
+      "level": 6,
+      "details": {
+        "definisi": "Orang yang mampu mengaplikasikan bidang keahliannya dan memanfaatkan ilmu pengetahuan, teknologi, dan/atau seni pada bidang Audit Keamanan Informasi dalam penyelesaian masalah serta mampu beradaptasi terhadap situasi yang dihadapi; Menguasai konsep teoritis bidang pengetahuan Audit Keamanan Informasi secara umum dan konsep teoritis bagian khusus dalam bidang pengetahuan Audit Keamanan Informasi secara mendalam, serta mampu memformulasikan penyelesaian masalah prosedural; mampu mengambil keputusan yang tepat berdasarkan analisis informasi dan data, dan mampu memberikan petunjuk dalam memilih berbagai alternatif solusi secara mandiri dan kelompok; Bertanggung jawab pada pekerjaan sendiri dan dapat diberi tanggung jawab atas pencapaian hasil kerja organisasi.",
+        "kualifikasi": "Level 6",
+        "lingkup_bidang": "Mengemukakan hasil pelaksanaan Audit Keamanan Informasi",
+        "profil": [
+          "Tepat dalam menyampaikan langkah-langkah Audit Keamanan Informasi kepada pihak terkait sesuai dengan kebutuhan",
+          "Tepat dalam mengompilasi sumber daya Audit Keamanan Informasi sesuai dengan prosedur pelaporan",
+          "Tepat dalam menjabarkan temuan Audit Keamanan Informasi sesuai dengan prosedur Audit Keamanan Informasi",
+          "Tepat dalam menjabarkan rekomendasi untuk temuan Audit Keamanan Informasi sesuai dengan kebutuhan",
+          "Tepat dalam menyampaikan kesimpulan Audit Keamanan Informasi dalam laporan kepada pihak terkait sesuai dengan prosedur Audit Keamanan Informasi"
+        ],
+        "tanggung_jawab": [
+          "Mengumpulkan langkah-langkah AKI yang telah dilaksanakan dalam laporan AKI",
+          "Mengkomunikasikan langkah-langkah AKI yang telah dilaksanakan dalam laporan AKI",
+          "Mengumpulkan sumber daya AKI yang digunakan dalam Laporan AKI",
+          "Mengkomunikasikan sumber daya AKI yang digunakan",
+          "Memformulasikan temuan AKI",
+          "Mengkomunikasikan temuan AKI dalam laporan AKI",
+          "Merumuskan rekomendasi untuk temuan AKI",
+          "Mengkomunikasikan rekomendasi AKI dalam laporan AKI",
+          "Memperoleh tanggapan atas rekomendasi yang disampaikan",
+          "Menarik kesimpulan dari hasil pelaksanaan AKI",
+          "Mengkomunikasikan kesimpulan AKI dalam laporan AKI",
+          "Mendefinisikan tujuan AKI",
+          "Mendefinisikan lingkup AKI"
+        ],
+        "wewenang": [
+          "Mengambil keputusan yang tepat berdasarkan analisis informasi dan data",
+          "Memberikan petunjuk dalam memilih berbagai alternatif solusi Audit Keamanan Informasi secara mandiri dan kelompok"
+        ],
+        "persyaratan": [
+          "Memiliki sertifikasi kompetensi terkait setara KKNI Level 5 Bidang Audit Keamanan Informasi; atau",
+          "Minimum Lulusan Sarjana 1 (S1)/ Diploma 4 (D4);",
+          "Berpengalaman mengikuti 1 (satu) proses Audit Keamanan Informasi sebagai Asisten Auditor."
+        ],
+        "jenjang_karier": "Manajer Audit Keamanan Informasi (Information Security Audit Manager) - TIK.SEC0711",
+        "tugas_utama": [
+          {
+            "deskripsi": "Menyampaikan Prosedur Audit Keamanan Informasi (AKI) yang Dilaksanakan di dalam Laporan AKI",
+            "kode_skkni": "J.62AKI00.015.1 (SKKNI 2022-024)"
+          },
+          {
+            "deskripsi": "Menyampaikan Sumber Daya Audit Keamanan Informasi (AKI) yang Digunakan dalam Laporan AKI",
+            "kode_skkni": "J.62AKI00.016.1 (SKKNI 2022-024)"
+          },
+          {
+            "deskripsi": "Menyampaikan Temuan Audit Keamanan Informasi (AKI) dalam Laporan AKI",
+            "kode_skkni": "J.62AKI00.017.1 (SKKNI 2022-024)"
+          },
+          {
+            "deskripsi": "Menyampaikan Rekomendasi Audit Keamanan Informasi (AKI) dalam Laporan AKI",
+            "kode_skkni": "J.62AKI00.018.1 (SKKNI 2022-024)"
+          },
+          {
+            "deskripsi": "Menyampaikan Kesimpulan Audit Keamanan Informasi (AKI)",
+            "kode_skkni": "J.62AKI00.019.1 (SKKNI 2022-024)"
+          },
+          {
+            "deskripsi": "Menentukan Tujuan dan Lingkup Audit Keamanan Informasi (AKI)",
+            "kode_skkni": "J.62AKI00.001.1 (SKKNI 2022-024)"
+          }
+        ],
+        "tugas_khusus": [
+          {
+            "deskripsi": "Melaksanakan Prosedur Audit Keamanan Informasi (AKI) terhadap Kendali Organisasi",
+            "kode_skkni": "J.62AKI00.005.1 (SKKNI 2022-024)"
+          },
+          {
+            "deskripsi": "Melaksanakan Prosedur Audit Keamanan Informasi (AKI) terhadap Kendali Teknologi",
+            "kode_skkni": "J.62AKI00.006.1 (SKKNI 2022-024)"
+          },
+          {
+            "deskripsi": "Melaksanakan Prosedur Audit Keamanan Informasi (AKI) terhadap Kendali Fisik",
+            "kode_skkni": "J.62AKI00.007.1 (SKKNI 2022-024)"
+          },
+          {
+            "deskripsi": "Melaksanakan Prosedur Audit Keamanan Informasi (AKI) terhadap Kendali Personel",
+            "kode_skkni": "J.62AKI00.008.1 (SKKNI 2022-024)"
+          },
+          {
+            "deskripsi": "Mengevaluasi Bukti Pelaksanaan Tindak Lanjut Rekomendasi Audit Keamanan Informasi (AKI)",
+            "kode_skkni": "J.62AKI00.021.1 (SKKNI 2022-024)"
+          }
+        ],
+        "sertifikasi": "-",
+        "verifikasi": "Badan Siber dan Sandi Negara"
+      }
+    },
+    {
+      "code": "SKM-CYB-003",
+      "name": "Spesialis Forensik Siber",
+      "category": "cyber",
+      "level": 8,
+      "details": {
+        "definisi": "Orang yang memiliki kemampuan teknis dan keahlian untuk memeriksa secara mendalam barang bukti elektronik dan digital yang berasal dari sistem jaringan dalam rangka mendapatkan data investigatif untuk dianalisis secara komprehensif sebagai bukti digital yang dapat digunakan untuk memecahkan kasus cybercrime, baik pada tahap investigasi maupun pada tahap penuntutan sebagai ahli di dalam persidangan.",
+        "kualifikasi": "Level 8",
+        "lingkup_bidang": [
+          "Membentuk tim dan pertelaan tugas",
+          "Mengelola peralatan",
+          "Membagi pekerjaan dan urutan berbasis skala prioritas",
+          "Mengawasi dan mengendalikan pelaksanaan respon terhadap cyber incidents",
+          "Mengawasi dan mengendalikan pelaksanaan pemeriksaan digital forensik",
+          "Mengawasi dan mengendalikan pelaksanaan investigasi umum"
+        ],
+        "profil": [
+          "Berintegritas",
+          "Profesional",
+          "Tidak memihak",
+          "Analitis",
+          "Mengatasi masalah (problem-solving)",
+          "Berorientasi pada detail"
+        ],
+        "tanggung_jawab": [
+          "Memastikan bukti digital kuat secara ilmiah dan hukum",
+          "Memastikan pemeriksaan dan analisis digital forensic dapat dilaksanakan dengan semestinya",
+          "Memastikan pelaksanaan cyber incident response dapat dilaksanakan dengan semestinya",
+          "Memastikan kepatuhan dengan sistem manajemen mutu sesuai dengan standar ISO 17025 atau ISO 9001",
+          "Mengelola beban kerja tim teknis berdasarkan keahlian",
+          "Menyusun laporan hasil investigasi sebagai bukti digital dalam persidangan"
+        ],
+        "wewenang": [],
+        "persyaratan": [
+          "Memiliki sertifikasi kompetensi terkait setara KKNI Level 7 (1 level di bawah level okupasi); atau",
+          "Minimum Lulusan S1/D4 pada program studi teknik yang terkait seperti elektronik/perangkat lunak/forensik digital/ilmu komputer/keamanan informasi;",
+          "Memiliki pengalaman sekurang-kurangnya 4 tahun dalam melakukan pemeriksaan/penelitian digital forensic yang ditunjukkan dengan jumlah barang bukti elektronik dan digital yang diverifikasi melalui surat keterangan dari pihak yang semestinya;",
+          "Memiliki Sertifikasi kompetensi Digital Evidence Manager dan Digital Forensic Analyst;",
+          "Memiliki pemahaman alat bukti hukum yang sah yang ditunjukkan dengan sertifikasi pelatihan/pendidikan di bidang hukum cyber."
+        ],
+        "jenjang_karier": "Manajer Investigasi Insiden Siber (Cyber Incident Investigation Manager) - TIK.SEC0804",
+        "tugas_utama": [
+          {
+            "deskripsi": "Develop forensic crime scene expertise",
+            "kode_skkni": "POLFOR004"
+          },
+          {
+            "deskripsi": "Conduct complex forensic crime and incident scene investigations",
+            "kode_skkni": "POLFOR002"
+          },
+          {
+            "deskripsi": "Coordinate multi-discipline forensic investigation",
+            "kode_skkni": "POLFOR003"
+          },
+          {
+            "deskripsi": "Mengidentifikasi dan mengumpulkan barang bukti elektronik dan digital",
+            "kode_skkni": null
+          },
+          {
+            "deskripsi": "Mengidentifikasi dan melokalisir cyber attack",
+            "kode_skkni": null
+          },
+          {
+            "deskripsi": "Mempersiapkan Triage tools dan melaksanakan Triage Forensic",
+            "kode_skkni": null
+          },
+          {
+            "deskripsi": "Melakukan preservasi barang bukti elektronik dan digital",
+            "kode_skkni": null
+          },
+          {
+            "deskripsi": "Melakukan akuisisi barang bukti elektronik dan digital",
+            "kode_skkni": null
+          }
+        ],
+        "tugas_khusus": [
+          {
+            "deskripsi": "Melakukan forensic imaging melalui sistem jaringan",
+            "kode_skkni": null
+          },
+          {
+            "deskripsi": "Menganalisis paket-paket data pada sistem jaringan",
+            "kode_skkni": null
+          },
+          {
+            "deskripsi": "Menganalisis sistem jaringan khusus",
+            "kode_skkni": null
+          },
+          {
+            "deskripsi": "Menganalisis malware pada sistem jaringan",
+            "kode_skkni": null
+          },
+          {
+            "deskripsi": "Menganalisis logs",
+            "kode_skkni": null
+          },
+          {
+            "deskripsi": "Menganalisis cyber attacks",
+            "kode_skkni": null
+          },
+          {
+            "deskripsi": "Melakukan data recovery",
+            "kode_skkni": null
+          }
+        ],
+        "sertifikasi": "-",
+        "verifikasi": "Badan Siber dan Sandi Negara"
+      }
+    },
+    {
+      "code": "SKM-CYB-004",
+      "name": "Analis SOC Tingkat 3",
+      "category": "cyber",
+      "level": 6,
+      "details": {
+        "definisi": "Orang yang mampu mengaplikasikan bidang Security Operation Center dan memanfaatkan ilmu pengetahuan, teknologi, dan/atau seni pada bidang Security Operation Center dalam penyelesaian masalah serta mampu beradaptasi terhadap situasi yang dihadapi; menguasai konsep teoritis bidang pengetahuan Security Operation Center secara umum dan konsep teoritis bagian khusus dalam bidang Security Operation Center secara mendalam, serta mampu memformulasikan penyelesaian masalah prosedural; mampu mengambil keputusan yang tepat berdasarkan analisis informasi dan data, dan mampu memberikan petunjuk dalam memilih berbagai alternatif solusi Security Operation Center secara mandiri dan kelompok; bertanggung jawab pada pekerjaan sendiri dan dapat diberi tanggung jawab atas pencapaian hasil kerja tim Security Operation Center.",
+        "kualifikasi": "Level 6",
+        "lingkup_bidang": "Membantu SOC Manager dalam pelaksanaan Security Operation Center",
+        "profil": [
+          "Cermat dalam mengidentifikasi kebutuhan ragam prosedur pada setiap tahapan proses bisnis berdasarkan standar dan best practice",
+          "Cermat dalam mengidentifikasi pencadangan data SOC berdasarkan kebijakan retensi data organisasi",
+          "Tepat dalam melakukan prosedur pencadangan berdasarkan kebijakan yang ditentukan",
+          "Mampu dalam komunikasi penanganan insiden keamanan siber kepada pihak terkait berdasarkan tujuan komunikasi",
+          "Tepat dalam menentukan langkah-langkah komunikasi manajemen krisis sesuai prosedur komunikasi manajemen krisis",
+          "Tepat dalam menganalisis log dan traffic dari aset TI yang terdampak berdasarkan parameter kewajaran",
+          "Tepat dalam menentukan modus operandi sesuai dengan hasil analisis",
+          "Tepat dalam mengidentifikasi penyebab atau sumber insiden yang terjadi berdasarkan informasi insiden keamanan siber",
+          "Tepat dalam memberikan rekomendasi solusi teknis berdasarkan hasil analisis kepada pihak terkait",
+          "Tepat dalam melakukan isolasi terhadap aset TI yang terdampak berdasarkan prosedur dan kewenangan sesuai dengan kesepakatan antara bisnis manajer dengan tim tanggap insiden keamanan siber",
+          "Tepat dalam melakukan terminasi terhadap aset TI yang terdampak berdasarkan prosedur dan kewenangan yang diberikan",
+          "Tepat dalam menganalisis strategi penerapan perbaikan sistem setelah insiden keamanan siber berdasarkan tingkat keberhasilan",
+          "Mampu dalam membuat daftar pembelajaran berdasarkan penanganan insiden keamanan siber sebelumnya"
+        ],
+        "tanggung_jawab": [
+          "Mengidentifikasikan proses bisnis penanganan insiden keamanan siber",
+          "Mengidentifikasi prosedur yang dibutuhkan dalam setiap tahap penanganan insiden keamanan siber",
+          "Membuat prosedur penanganan insiden keamanan siber",
+          "Menyiapkan pencadangan data",
+          "Melaksanakan pencadangan data",
+          "Melaksanakan pemulihan pencadangan data",
+          "Melaksanakan penghapusan data yang sudah melalui masa retensi",
+          "Melaksanakan prosedur komunikasi penanganan insiden keamanan siber yang telah ditentukan",
+          "Melakukan komunikasi penanganan insiden keamanan siber kepada pihak terkait",
+          "Melaksanakan prosedur komunikasi manajemen krisis apabila keadaan tidak terkendali",
+          "Melaksanakan prosedur awal penanganan insiden keamanan siber",
+          "Melakukan analisis modus serangan",
+          "Mendokumentasikan kegiatan",
+          "Melakukan analisis terhadap insiden keamanan siber yang terjadi berdasarkan data yang dikumpulkan",
+          "Memberikan rekomendasi solusi teknis",
+          "Menentukan apakah insiden keamanan siber dapat diisolasi",
+          "Melakukan isolasi terhadap aset TI terdampak",
+          "Melakukan penghentian insiden keamanan siber",
+          "Melakukan pencabutan isolasi terhadap aset TI yang terdampak insiden",
+          "Menentukan titik awal insiden keamanan siber",
+          "Melakukan terminasi terhadap aset TI yang terdampak",
+          "Melakukan proses pencabutan terminasi",
+          "Mengukur efektivitas dari strategi yang disiapkan dalam menghadapi insiden keamanan siber",
+          "Mengidentifikasi kebutuhan perbaikan strategi penanganan insiden keamanan siber",
+          "Membuat rekomendasi perbaikan setelah insiden keamanan siber"
+        ],
+        "wewenang": [
+          "Mengambil keputusan yang tepat berdasarkan analisis informasi dan data",
+          "Memberikan petunjuk dalam memilih berbagai alternatif solusi Security Operation Center secara mandiri dan kelompok"
+        ],
+        "persyaratan": [
+          "Memiliki sertifikasi kompetensi KKNI Level 5 Bidang Security Operation Center",
+          "Memiliki pengalaman di bidang SOC Analyst sekurang-kurangnya 3 tahun."
+        ],
+        "jenjang_karier": "Manajer SOC (SOC Manager) - TIK.SEC0710",
+        "tugas_utama": [
+          {
+            "deskripsi": "Menyusun Prosedur Penanganan Insiden Keamanan Siber",
+            "kode_skkni": "J.62SOC00.003.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Melakukan Pencadangan Data Security Operations Center (SOC)",
+            "kode_skkni": "J.62SOC00.012.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Mengkomunikasikan Penanganan Insiden Keamanan Siber dan Manajemen Krisis",
+            "kode_skkni": "J.62SOC00.013.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Melakukan Investigasi Modus Operandi Insiden Keamanan Siber",
+            "kode_skkni": "J.62SOC00.014.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Mengidentifikasi Solusi Teknis terhadap Insiden Keamanan Siber yang Terjadi",
+            "kode_skkni": "J.62SOC00.015.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Mengisolasi Aset Teknologi Informasi (TI) yang Terdampak untuk Menghentikan Insiden Keamanan Siber",
+            "kode_skkni": "J.62SOC00.016.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Melakukan Terminasi Layanan Aset Teknologi Informasi (TI) Terdampak Insiden untuk Perbaikan",
+            "kode_skkni": "J.62SOC00.017.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Membuat Rekomendasi Perbaikan setelah Insiden Keamanan Siber",
+            "kode_skkni": "J.62SOC00.020.1 (SKKNI 2020-391)"
+          }
+        ],
+        "tugas_khusus": [
+          {
+            "deskripsi": "Melakukan Analisis Keamanan Siber terhadap Insiden Keamanan Siber untuk Menentukan Kendali",
+            "kode_skkni": "J.62SOC00.005.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Mengelompokkan Insiden Keamanan Siber yang Terjadi sesuai dengan Tingkat Kegentingan",
+            "kode_skkni": "J.62SOC00.009.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Menganalisis Dampak Insiden Keamanan Siber",
+            "kode_skkni": "J.62SOC00.018.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Menguji Kerentanan pada Obyek Pengujian",
+            "kode_skkni": "J.62UKS00.007.1 (SKKNI 2022-023)"
+          }
+        ],
+        "sertifikasi": "-",
+        "verifikasi": "Badan Siber dan Sandi Negara"
+      }
+    },
+    {
+      "code": "SKM-CYB-005",
+      "name": "Analis Tanggap Insiden",
+      "category": "cyber",
+      "level": 6,
+      "details": {
+        "definisi": "Orang yang memiliki kemampuan untuk mendeteksi, menganalisis, merespon insiden siber dan memberikan rekomendasi perbaikan serta melakukan koordinasi penanganan insiden.",
+        "kualifikasi": "Level 6",
+        "lingkup_bidang": "-",
+        "profil": [
+          "Berintegritas",
+          "Mematuhi prosedur",
+          "Berorientasi pada detail",
+          "Tidak memihak",
+          "Komunikatif",
+          "Mampu bekerja dalam tim"
+        ],
+        "tanggung_jawab": [
+          "Melakukan penanganan insiden siber",
+          "Berkoordinasi dengan semua pihak yang terkait dalam penanganan insiden, baik internal maupun eksternal (aparat penegak hukum dan/atau media)",
+          "Menganalisa trend postur keamanan siber"
+        ],
+        "wewenang": [],
+        "persyaratan": [
+          "Memiliki sertifikasi kompetensi terkait setara KKNI Level 5 (1 level di bawah level okupasi); atau",
+          "Memiliki pengalaman sebagai tim CSIRT;",
+          "Memiliki Sertifikasi kompetensi Cybersecurity Operator."
+        ],
+        "jenjang_karier": "Manajer Tim Tanggap Insiden (Incident Response Team Manager) - TIK.SEC0705",
+        "tugas_utama": [
+          {
+            "deskripsi": "Melakukan Pencadangan Data Security Operations Center (SOC)",
+            "kode_skkni": "J.62SOC00.012.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Mengkomunikasikan Penanganan Insiden Keamanan Siber dan Manajemen Krisis",
+            "kode_skkni": "J.62SOC00.013.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Melakukan Investigasi Modus Operandi Insiden Keamanan Siber",
+            "kode_skkni": "J.62SOC00.014.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Mengidentifikasi Solusi Teknis terhadap Insiden Keamanan Siber yang Terjadi",
+            "kode_skkni": "J.62SOC00.015.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Mengisolasi Aset Teknologi Informasi (TI) yang Terdampak untuk Menghentikan Insiden Keamanan Siber",
+            "kode_skkni": "J.62SOC00.016.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Melakukan Terminasi Layanan Aset Teknologi Informasi (TI) Terdampak Insiden untuk Perbaikan",
+            "kode_skkni": "J.62SOC00.017.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Menganalisis Dampak Insiden Keamanan Siber",
+            "kode_skkni": "J.62SOC00.018.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Membuat Rekomendasi Perbaikan setelah Insiden Keamanan Siber",
+            "kode_skkni": "J.62SOC00.020.1 (SKKNI 2020-391)"
+          }
+        ],
+        "tugas_khusus": [],
+        "sertifikasi": "-",
+        "verifikasi": "Badan Siber dan Sandi Negara"
+      }
+    },
+    {
+      "code": "SKM-CYB-006",
+      "name": "Penguji Kamsi Pertama (Jr. Pentester)",
+      "category": "cyber",
+      "level": 3,
+      "details": {
+        "definisi": "Orang yang mampu melaksanakan serangkaian tugas spesifik pada Uji Keamanan Siber, dengan menerjemahkan informasi dan menggunakan alat, berdasarkan sejumlah pilihan prosedur kerja, serta mampu menunjukkan kinerja dengan mutu dan kuantitas yang terukur, yang sebagian merupakan hasil kerja sendiri dengan pengawasan tidak langsung Penetration Tester dan/atau Senior Penetration Tester. Memiliki pengetahuan operasional yang lengkap, prinsip-prinsip serta konsep umum yang terkait dengan fakta bidang Uji Keamanan Siber, sehingga mampu menyelesaikan berbagai masalah yang lazim dengan metode yang sesuai. Mampu bekerja sama dan melakukan komunikasi dalam lingkup kerjanya. Bertanggung jawab pada pekerjaan sendiri dan dapat diberi tanggung jawab atas kuantitas dan mutu hasil kerja orang lain.",
+        "kualifikasi": "Level 3",
+        "lingkup_bidang": "Membantu Penguji Keamanan Siber Muda mengumpulkan informasi yang dibutuhkan dalam melakukan pengujian",
+        "profil": [
+          "Tepat dalam memilih metode penilaian kerentanan berdasarkan relevansi terhadap hasil UKS",
+          "Tepat dalam memetakan hasil analisis berdasarkan tingkat reliabilitasnya terhadap pelaksanaan UKS",
+          "Tepat dalam mengidentifikasi kerentanan yang bersifat false positive berdasarkan hasil analisis daftar kerentanan",
+          "Tepat dalam menganalisis relevansi temuan terhadap kebutuhan laporan berdasarkan ruang lingkup pengujian keamanan siber"
+        ],
+        "tanggung_jawab": [
+          "Menelaah metode penilaian kerentanan yang relevan",
+          "Mengidentifikasi metode penilaian kerentanan hasil Uji Keamanan Siber (UKS)",
+          "Menghimpun informasi yang dianggap relevan",
+          "Memeriksa hasil penghimpunan informasi yang relevan",
+          "Mengidentifikasi kerentanan objek pengujian",
+          "Memeriksa kerentanan objek pengujian",
+          "Mengidentifikasi temuan yang relevan",
+          "Mendokumentasikan temuan hasil pengujian keamanan siber"
+        ],
+        "wewenang": [
+          "Memilih penyelesaian yang tersedia terhadap masalah yang lazim timbul dalam penyusunan dokumentasi Uji Keamanan Siber"
+        ],
+        "persyaratan": [
+          "Memiliki pengalaman sekurang-kurangnya 3 kali atau 1 tahun di bidang Penetration Testing."
+        ],
+        "jenjang_karier": "Penguji Keamanan Siber Muda (Penetration Tester) - TIK.SEC0503",
+        "tugas_utama": [
+          {
+            "deskripsi": "Menentukan Metode Penilaian Kerentanan",
+            "kode_skkni": "J.62UKS00.002.1 (SKKNI 2022-023)"
+          },
+          {
+            "deskripsi": "Mengumpulkan Informasi yang diperlukan untuk Pengujian Keamanan Siber",
+            "kode_skkni": "J.62UKS00.005.1 (SKKNI 2022-023)"
+          },
+          {
+            "deskripsi": "Mencari Kerentanan Sesuai Ruang Lingkup Pengujian Keamanan Siber",
+            "kode_skkni": "J.62UKS00.006.1 (SKKNI 2022-023)"
+          },
+          {
+            "deskripsi": "Melakukan Kompilasi Temuan Hasil Pengujian Keamanan Siber",
+            "kode_skkni": "J.62UKS00.009.1 (SKKNI 2022-023)"
+          }
+        ],
+        "tugas_khusus": [
+          {
+            "deskripsi": "Melakukan Deteksi Kerentanan Aset Teknologi Informasi (TI)",
+            "kode_skkni": "J.62SOC00.006.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Menganalisis Ancaman/Anomali Keamanan Siber (Threat Intelligence) pada Perimeter Keamanan",
+            "kode_skkni": "J.62SOC00.007.1 (SKKNI 2020-391)"
+          },
+          {
+            "deskripsi": "Mengklasifikasikan Informasi yang Bersifat Rahasia",
+            "kode_skkni": "J.62KAM00.001.2 (SKKNI 2024-191)"
+          }
+        ],
+        "sertifikasi": "-",
+        "verifikasi": "Badan Siber dan Sandi Negara"
+      }
+    },
+    {
+      "code": "SKM-CYB-007",
+      "name": "Penguji Keamanan Siber (Pentester)",
+      "category": "cyber",
+      "level": 5,
+      "details": {
+        "definisi": "Orang yang mampu menyelesaikan pekerjaan Uji Keamanan Siber (UKS) dengan lingkup luas, memilih metode uji yang sesuai dari beragam pilihan yang sudah maupun belum baku dengan menganalisis data, serta mampu menunjukkan kinerja dengan mutu dan kuantitas yang terukur; menguasai konsep teoritis bidang Uji Keamanan Siber secara umum, serta mampu memformulasikan penyelesaian masalah prosedural; mampu mengelola Tim Uji dan menyusun laporan tertulis hasil uji secara komprehensif; bertanggung jawab pada pekerjaan sendiri dan dapat diberi tanggung jawab atas pencapaian hasil kerja Tim Uji.",
+        "kualifikasi": "Level 5",
+        "lingkup_bidang": "Melakukan pengujian keamanan siber",
+        "profil": [
+          "Keberhasilan dalam melakukan eksploitasi parameter pada objek pengujian dengan exploit yang dianggap relevan",
+          "Tepat dalam menentukan ruang lingkup pengujian berdasarkan objek pengujian, tujuan pengujian, dan kerangka kerja pengujian keamanan siber",
+          "Tepat dalam menyusun laporan yang lengkap sesuai dengan ruang lingkup pengujian keamanan siber"
+        ],
+        "tanggung_jawab": [
+          "Menganalisis ruang lingkup pengujian keamanan siber",
+          "Menetapkan ruang lingkup pengujian keamanan siber",
+          "Menentukan parameter yang akan dieksploitasi pada objek pengujian",
+          "Memeriksa parameter yang dieksploitasi pada objek pengujian",
+          "Mengidentifikasi dampak temuan terhadap organisasi",
+          "Membuat narasi laporan"
+        ],
+        "wewenang": [
+          "Memformulasikan penyelesaian masalah dalam pelaksanaan prosedur Uji Keamanan Siber"
+        ],
+        "persyaratan": [
+          "Memiliki sertifikasi Kompetensi terkait setara KKNI Level 4 Bidang Uji Keamanan Siber; atau",
+          "Memiliki pengalaman di bidang Penetration Testing sekurang-kurangnya 3 tahun."
+        ],
+        "jenjang_karier": "Penguji Keamanan Siber Madya (Senior Penetration Tester) - TIK.SEC0712",
+        "tugas_utama": [
+          {
+            "deskripsi": "Menentukan Ruang Lingkup Pengujian Keamanan Siber",
+            "kode_skkni": "J.62UKS00.003.1 (SKKNI 2022-023)"
+          },
+          {
+            "deskripsi": "Menguji Kerentanan pada Objek Pengujian",
+            "kode_skkni": "J.62UKS00.007.1 (SKKNI 2022-023)"
+          },
+          {
+            "deskripsi": "Menyusun Laporan Hasil Pengujian Keamanan Siber",
+            "kode_skkni": "J.62UKS00.010.1 (SKKNI 2022-023)"
+          }
+        ],
+        "tugas_khusus": [
+          {
+            "deskripsi": "Menentukan Metode Penilaian Kerentanan",
+            "kode_skkni": "J.62UKS00.002.1 (SKKNI 2022-023)"
+          },
+          {
+            "deskripsi": "Mengumpulkan Informasi yang diperlukan untuk Pengujian Keamanan Siber",
+            "kode_skkni": "J.62UKS00.005.1 (SKKNI 2022-023)"
+          },
+          {
+            "deskripsi": "Mencari Kerentanan Sesuai Ruang Lingkup Pengujian Keamanan Siber",
+            "kode_skkni": "J.62UKS00.006.1 (SKKNI 2022-023)"
+          }
+        ],
+        "sertifikasi": "-",
+        "verifikasi": "Badan Siber dan Sandi Negara"
+      }
+    }
+  ]
+}

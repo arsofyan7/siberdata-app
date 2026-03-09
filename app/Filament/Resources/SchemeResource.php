@@ -57,11 +57,61 @@ class SchemeResource extends Resource
 
                         Forms\Components\RichEditor::make('description')
                             ->columnSpanFull(),
-                    ])->columns(2)
+                    ])->columns(2),
+
+                Forms\Components\Section::make('Informasi Detail (JSON)')
+                    ->description('Data detail terkait skema untuk Profil, Tugas, dan Persyaratan')
+                    ->schema([
+                        Forms\Components\Textarea::make('details.definisi')
+                            ->label('Definisi')
+                            ->rows(3)
+                            ->columnSpanFull(),
+                        Forms\Components\Textarea::make('details.kualifikasi')
+                            ->label('Kualifikasi')
+                            ->rows(3)
+                            ->columnSpanFull(),
+                        Forms\Components\Textarea::make('details.lingkup_bidang')
+                            ->label('Lingkup Bidang')
+                            ->rows(3)
+                            ->columnSpanFull(),
+                        Forms\Components\Textarea::make('details.profil')
+                            ->label('Profil')
+                            ->rows(3)
+                            ->columnSpanFull(),
+                        Forms\Components\Textarea::make('details.tanggung_jawab')
+                            ->label('Tanggung Jawab')
+                            ->rows(3)
+                            ->columnSpanFull(),
+                        Forms\Components\Textarea::make('details.wewenang')
+                            ->label('Wewenang')
+                            ->rows(3)
+                            ->columnSpanFull(),
+                        Forms\Components\Textarea::make('details.persyaratan')
+                            ->label('Persyaratan')
+                            ->rows(3)
+                            ->columnSpanFull(),
+                        Forms\Components\TagsInput::make('details.tugas')
+                            ->label('Tugas')
+                            ->separator(',')
+                            ->columnSpanFull(),
+                        Forms\Components\Textarea::make('details.jenjang_karier')
+                            ->label('Jenjang Karier')
+                            ->rows(2)
+                            ->columnSpanFull(),
+                        Forms\Components\Textarea::make('details.sertifikasi')
+                            ->label('Sertifikasi')
+                            ->rows(2)
+                            ->columnSpanFull(),
+                        Forms\Components\Textarea::make('details.verifikasi')
+                            ->label('Metode Verifikasi')
+                            ->rows(2)
+                            ->columnSpanFull(),
+                    ])->collapsible(),
             ]);
     }
 
-    public static function table(Table $table): Table
+
+        public static function table(Table $table): Table
     {
         return $table
             ->columns([
@@ -86,6 +136,11 @@ class SchemeResource extends Resource
 
                 Tables\Columns\ToggleColumn::make('is_active')
                     ->label('Status'),
+
+                Tables\Columns\TextColumn::make('details.definisi')
+                    ->label('Definisi Skema')
+                    ->limit(50)
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('category')
@@ -104,6 +159,7 @@ class SchemeResource extends Resource
                 ]),
             ]);
     }
+
 
     public static function getPages(): array
     {

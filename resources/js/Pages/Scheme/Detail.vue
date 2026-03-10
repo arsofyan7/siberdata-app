@@ -68,6 +68,8 @@ const tabs = [
                     <div class="hidden md:flex items-center space-x-8">
                         <Link href="/" class="text-sm font-bold text-slate-600 hover:text-blue-700 transition-colors">Home</Link>
                         <Link href="/skema" class="text-sm font-bold text-blue-700 transition-colors">Skema</Link>
+                        <Link href="/dokumen" class="text-sm font-bold text-slate-600 hover:text-blue-700 transition-colors">Dokumen</Link>
+                        <Link href="/berita" class="text-sm font-bold text-slate-600 hover:text-blue-700 transition-colors">Berita</Link>
                         <Link href="/about" class="text-sm font-bold text-slate-600 hover:text-blue-700 transition-colors">About</Link>
                         
                         <div class="h-6 w-px bg-slate-300 mx-2"></div>
@@ -104,6 +106,8 @@ const tabs = [
                 <div class="px-4 pt-2 pb-6 space-y-1">
                     <Link href="/" @click="isMobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-bold text-slate-700 hover:text-blue-700 hover:bg-slate-50 transition-colors">Home</Link>
                     <Link href="/skema" @click="isMobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-bold text-blue-700 bg-slate-50 transition-colors">Skema</Link>
+                    <Link href="/dokumen" @click="isMobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-bold text-slate-700 hover:text-blue-700 hover:bg-slate-50 transition-colors">Dokumen</Link>
+                    <Link href="/berita" @click="isMobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-bold text-slate-700 hover:text-blue-700 hover:bg-slate-50 transition-colors">Berita</Link>
                     <Link href="/about" @click="isMobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-bold text-slate-700 hover:text-blue-700 hover:bg-slate-50 transition-colors">About</Link>
                     
                     <div class="border-t border-slate-100 my-2 pt-2"></div>

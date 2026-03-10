@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Document extends Model
+class Post extends Model
 {
     use HasFactory, HasUuids;
 
@@ -14,9 +14,11 @@ class Document extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
-        'name',
-        'description',
-        'type',
-        'file_path',
+        'title',
+        'slug',
+        'content',
+        'thumbnail',
+        'category',
+        'is_published',
     ];
 }

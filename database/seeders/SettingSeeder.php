@@ -24,5 +24,22 @@ class SettingSeeder extends Seeder
                 'email' => 'lspsiberdata@gmail.com',
             ],
         ]);
+
+        Setting::create([
+            'key' => 'landing_page',
+            'value' => [
+                'stats' => [
+                    ['label' => 'Skema Sertifikasi', 'targetValue' => 13, 'suffix' => '', 'icon' => 'Award'],
+                    ['label' => 'Asesor Kompeten', 'targetValue' => 50, 'suffix' => '+', 'icon' => 'Users'],
+                    ['label' => 'Asesi Terdaftar', 'targetValue' => 1000, 'suffix' => '+', 'icon' => 'ShieldCheck'],
+                ],
+                'partners' => [
+                    // Start empty to force user interaction, or use placeholders
+                    ['name' => 'BNSP', 'logo' => 'https://placehold.co/400x150/ffffff/475569?text=Logo+BNSP&font=montserrat'],
+                    ['name' => 'KOMINFO', 'logo' => 'https://placehold.co/400x150/ffffff/475569?text=Logo+KOMINFO&font=montserrat'],
+                    ['name' => 'BSSN', 'logo' => 'https://placehold.co/400x150/ffffff/475569?text=Logo+BSSN&font=montserrat'],
+                ]
+            ],
+        ]);
     }
 }

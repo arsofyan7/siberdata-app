@@ -26,7 +26,7 @@ class SiberdataStatsWidget extends BaseWidget
         $certificationsDone = Certification::where('status', '!=', 'pending')->count();
 
         $totalDocs = Document::count();
-        $publishedDocs = Document::where('status', 'published')->count();
+        $skkniDocs = Document::whereIn('type', ['SKKNI TIK', 'SKKNI PDP'])->count();
 
         return [
             Stat::make('Skema Aktif', $totalSchemes)
@@ -47,8 +47,8 @@ class SiberdataStatsWidget extends BaseWidget
             ->color('success')
             ->icon('heroicon-m-academic-cap'),
 
-            Stat::make('Dokumen Kendali', $totalDocs)
-            ->description("{$publishedDocs} SOP & Formulir Published")
+            Stat::make('Dokumen Kompetensi', $totalDocs)
+            ->description("{$skkniDocs} Standar SKKNI")
             ->descriptionIcon('heroicon-m-document-check')
             ->color('danger')
             ->icon('heroicon-m-clipboard-document-check'),

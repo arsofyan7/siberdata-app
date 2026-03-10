@@ -79,6 +79,8 @@ watch([searchQuery, selectedCategory], () => {
                     <div class="hidden md:flex items-center space-x-8">
                         <Link href="/" class="text-sm font-bold text-slate-600 hover:text-blue-700 transition-colors">Home</Link>
                         <Link href="/skema" class="text-sm font-bold text-blue-700 transition-colors">Skema</Link>
+                        <Link href="/dokumen" class="text-sm font-bold text-slate-600 hover:text-blue-700 transition-colors">Dokumen</Link>
+                        <Link href="/berita" class="text-sm font-bold text-slate-600 hover:text-blue-700 transition-colors">Berita</Link>
                         <Link href="/about" class="text-sm font-bold text-slate-600 hover:text-blue-700 transition-colors">About</Link>
                         
                         <div class="h-6 w-px bg-slate-300 mx-2"></div>
@@ -114,6 +116,8 @@ watch([searchQuery, selectedCategory], () => {
                 <div class="px-4 pt-2 pb-6 space-y-1">
                     <Link href="/" @click="isMobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-bold text-slate-700 hover:text-blue-700 hover:bg-slate-50 transition-colors">Home</Link>
                     <Link href="/skema" @click="isMobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-bold text-blue-700 bg-slate-50 transition-colors">Skema</Link>
+                    <Link href="/dokumen" @click="isMobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-bold text-slate-700 hover:text-blue-700 hover:bg-slate-50 transition-colors">Dokumen</Link>
+                    <Link href="/berita" @click="isMobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-bold text-slate-700 hover:text-blue-700 hover:bg-slate-50 transition-colors">Berita</Link>
                     <Link href="/about" @click="isMobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-bold text-slate-700 hover:text-blue-700 hover:bg-slate-50 transition-colors">About</Link>
                     
                     <div class="border-t border-slate-100 my-2 pt-2"></div>
@@ -141,9 +145,18 @@ watch([searchQuery, selectedCategory], () => {
 
             <!-- Schemes Section & Filter -->
             <div id="schemes" class="mt-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Daftar Skema Unggulan</h2>
-                    <p class="mt-4 max-w-2xl text-xl text-slate-500 mx-auto">Pilih skema sertifikasi yang sesuai dengan karir dan profesi Anda.</p>
+                <!-- Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100/80 border border-blue-200 text-blue-700 text-sm font-semibold mb-6 backdrop-blur-sm">
+                        <ShieldCheck class="w-4 h-4" />
+                        Sertifikasi Profesi
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6">
+                        Daftar Skema <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">Unggulan</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-600 leading-relaxed">
+                        Pilih skema sertifikasi yang sesuai dengan karir dan profesi Anda.
+                    </p>
                 </div>
 
                 <!-- Filter UI Section -->

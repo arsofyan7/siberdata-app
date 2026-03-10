@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('documents', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('name');
-            $table->text('description')->nullable();
-            $table->enum('type', ['SKKNI TIK', 'SKKNI PDP', 'Lainnya'])->default('Lainnya');
-            $table->string('file_path')->nullable();
+            $table->string('title');
+            $table->string('slug')->unique();
+            $table->longText('content')->nullable();
+            $table->string('thumbnail')->nullable();
+            $table->string('category')->nullable();
+            $table->boolean('is_published')->default(true);
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('documents');
+        Schema::dropIfExists('posts');
     }
 };

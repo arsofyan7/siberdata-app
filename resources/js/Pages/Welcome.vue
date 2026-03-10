@@ -18,40 +18,47 @@ const props = defineProps({
     phpVersion: {
         type: String,
         required: true,
+    },
+    posts: {
+        type: Array,
+        default: () => [],
+    },
+    documents: {
+        type: Array,
+        default: () => [],
+    },
+    landingSettings: {
+        type: Object,
+        default: () => ({}),
     }
 });
 
 const isMobileMenuOpen = ref(false);
 
+const iconMap = {
+    'Award': Award,
+    'Users': Users,
+    'ShieldCheck': ShieldCheck,
+    'FileText': FileText,
+    'UserCircle': UserCircle,
+};
+
 // 1. Stats Data (Impact Counter)
 const statsRef = ref(null);
-const stats = ref([
-    { label: 'Skema Sertifikasi', targetValue: 13, value: 0, suffix: '', icon: Award },
-    { label: 'Asesor Kompeten', targetValue: 50, value: 0, suffix: '+', icon: Users },
-    { label: 'Asesi Terdaftar', targetValue: 1000, value: 0, suffix: '+', icon: ShieldCheck },
-]);
+const stats = ref((props.landingSettings.stats || []).map(stat => ({
+    ...stat,
+    value: 0,
+    icon: iconMap[stat.icon] || ShieldCheck
+})));
 
 // 2. Documents Data (Resource Center)
-const documents = ref([
-    { title: 'SKKNI Bidang Keamanan Siber', category: 'Standar Kompetensi', url: '#' },
-    { title: 'SKKNI Pelindungan Data Pribadi', category: 'Standar Kompetensi', url: '#' },
-    { title: 'Panduan Asesmen Online Asesi', category: 'Panduan Teknis', url: '#' },
-    { title: 'Katalog Skema Sertifikasi 2026', category: 'Dokumen Skema', url: '#' },
-]);
+const documents = props.documents || [];
 
 // 3. News Data (Knowledge Hub)
-const news = ref([
-    { title: 'LSP Siberdata Resmi Terakreditasi Penuh', category: 'Berita', summary: 'LSP Siberdata kini secara sah menjadi lembaga sertifikasi yang diakui penuh untuk menyelenggarakan uji kompetensi Siber.', image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800' },
-    { title: 'Pentingnya Sertifikasi PDP di Era Digital', category: 'Artikel', summary: 'Mengapa setiap perusahaan teknologi wajib memfasilitasi pelindungan data pelanggan secara profesional sesuai standar UU PDP.', image: 'https://picsum.photos/seed/pdptech/800/600' },
-    { title: 'Tips Menghadapi Uji Kompetensi Siber', category: 'Tips & Trik', summary: 'Persiapan yang matang dan pemahaman mendalam tentang standar SKKNI menjadi kunci keberhasilan peserta.', image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800' },
-]);
+const news = props.posts || [];
 
 // 4. Partners & Accreditations (Trust Badges)
-const partners = ref([
-    { name: 'BNSP', logo: 'https://placehold.co/400x150/ffffff/475569?text=Logo+BNSP&font=montserrat' },
-    { name: 'KOMINFO', logo: 'https://placehold.co/400x150/ffffff/475569?text=Logo+KOMINFO&font=montserrat' },
-    { name: 'BSSN', logo: 'https://placehold.co/400x150/ffffff/475569?text=Logo+BSSN&font=montserrat' },
-]);
+const partners = props.landingSettings.partners || [];
 
 let observer = null;
 
@@ -108,10 +115,11 @@ onUnmounted(() => {
                         </Link>
                     </div>
 
-                    <!-- Desktop Menu -->
                     <div class="hidden md:flex items-center space-x-8">
                         <Link href="/" class="text-sm font-bold text-slate-600 hover:text-blue-700 transition-colors">Home</Link>
                         <Link href="/skema" class="text-sm font-bold text-slate-600 hover:text-blue-700 transition-colors">Skema</Link>
+                        <Link href="/dokumen" class="text-sm font-bold text-slate-600 hover:text-blue-700 transition-colors">Dokumen</Link>
+                        <Link href="/berita" class="text-sm font-bold text-slate-600 hover:text-blue-700 transition-colors">Berita</Link>
                         <Link href="/about" class="text-sm font-bold text-slate-600 hover:text-blue-700 transition-colors">About</Link>
                         
                         <div class="h-6 w-px bg-slate-300 mx-2"></div>
@@ -216,13 +224,19 @@ onUnmounted(() => {
                         <div class="inline-flex items-center justify-center p-3 bg-teal-50 text-teal-600 rounded-xl mb-6 shadow-[0_0_15px_rgba(20,184,166,0.15)] group-hover:shadow-[0_0_25px_rgba(20,184,166,0.35)] transition-all">
                             <FileText class="w-6 h-6" />
                         </div>
-                        <div class="text-[11px] font-extrabold text-teal-600 mb-2 uppercase tracking-widest">{{ doc.category }}</div>
-                        <h3 class="text-lg font-bold text-slate-800 leading-snug mb-6 flex-grow">{{ doc.title }}</h3>
-                        <a :href="doc.url" class="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-800 group-hover:translate-x-1 transition-transform mt-auto">
+                        <div class="text-[11px] font-extrabold text-teal-600 mb-2 uppercase tracking-widest">{{ doc.type }}</div>
+                        <h3 class="text-lg font-bold text-slate-800 leading-snug mb-6 flex-grow">{{ doc.name }}</h3>
+                        <a :href="doc.file_path ? `/storage/${doc.file_path}` : '#'" target="_blank" class="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-800 group-hover:translate-x-1 transition-transform mt-auto">
                             Lihat Dokumen
                             <ArrowRight class="w-4 h-4 ml-1.5" />
                         </a>
                     </div>
+                </div>
+                <div class="mt-12 text-center">
+                    <Link href="/dokumen" class="inline-flex items-center justify-center px-8 py-3.5 border border-slate-200 text-base font-bold rounded-xl text-slate-700 bg-white hover:bg-teal-50 hover:text-teal-700 hover:border-teal-200 shadow-sm transition-all hover:-translate-y-1">
+                        Lihat Semua Dokumen
+                        <ArrowRight class="w-5 h-5 ml-2" />
+                    </Link>
                 </div>
             </div>
 
@@ -238,7 +252,7 @@ onUnmounted(() => {
                     <div v-for="(item, index) in news" :key="index" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-indigo-100 transition-all duration-300 overflow-hidden group flex flex-col">
                         <div class="relative h-56 overflow-hidden">
                             <div class="absolute inset-0 bg-slate-900/10 z-10 group-hover:bg-transparent transition-colors"></div>
-                            <img :src="item.image" :alt="item.title" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            <img :src="item.thumbnail ? `/storage/${item.thumbnail}` : 'https://placehold.co/800x600/ffffff/475569?text=No+Thumbnail'" :alt="item.title" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                             <div class="absolute top-4 left-4 z-20">
                                 <span class="px-3 py-1 bg-white/95 backdrop-blur-sm text-indigo-700 text-xs font-bold rounded-full shadow-sm">
                                     {{ item.category }}
@@ -247,15 +261,21 @@ onUnmounted(() => {
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-indigo-600 transition-colors line-clamp-2 leading-tight">{{ item.title }}</h3>
-                            <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">{{ item.summary }}</p>
+                            <div class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow line-clamp-3" v-html="item.content"></div>
                             <div class="mt-auto">
-                                <button class="text-sm font-bold text-indigo-600 hover:text-indigo-800 transition-colors inline-flex items-center group-hover:translate-x-1">
+                                <Link :href="'/berita/' + item.slug" class="text-sm font-bold text-indigo-600 hover:text-indigo-800 transition-colors inline-flex items-center group-hover:translate-x-1">
                                     Baca Selengkapnya
                                     <ArrowRight class="w-4 h-4 ml-1.5" />
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="mt-12 text-center">
+                    <Link href="/berita" class="inline-flex items-center justify-center px-8 py-3.5 border border-slate-200 text-base font-bold rounded-xl text-slate-700 bg-white hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-200 shadow-sm transition-all hover:-translate-y-1">
+                        Lihat Semua Berita
+                        <ArrowRight class="w-5 h-5 ml-2" />
+                    </Link>
                 </div>
             </div>
 
@@ -266,7 +286,7 @@ onUnmounted(() => {
                 </div>
                 <div class="flex flex-wrap justify-center items-center gap-12 sm:gap-24 opacity-80 hover:opacity-100 transition-opacity duration-500">
                     <div v-for="(partner, index) in partners" :key="index" class="group flex flex-col items-center">
-                        <img :src="partner.logo" :alt="partner.name" class="h-16 md:h-20 object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 ease-out transform group-hover:scale-105" />
+                        <img :src="partner.logo && !partner.logo.startsWith('http') ? `/storage/${partner.logo}` : partner.logo" :alt="partner.name" class="h-16 md:h-20 object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 ease-out transform group-hover:scale-105" />
                         <span class="mt-4 text-xs font-bold text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 tracking-wider">{{ partner.name }}</span>
                     </div>
                 </div>

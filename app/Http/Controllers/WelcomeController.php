@@ -6,9 +6,10 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
+use App\Models\Post;
+use App\Models\Document;
 use App\Models\Scheme;
 use App\Models\Setting;
-use Illuminate\Support\Facades\File;
 
 class WelcomeController extends Controller
 {
@@ -17,14 +18,22 @@ class WelcomeController extends Controller
         $aboutSetting = Setting::where('key', 'about_page')->first();
         $settings = $aboutSetting ? $aboutSetting->value : [];
 
+        $landingSetting = Setting::where('key', 'landing_page')->first();
+        $landingSettings = $landingSetting ? $landingSetting->value : [];
+
+        $posts = Post::where('is_published', true)->orderBy('created_at', 'desc')->take(3)->get();
+        $documents = Document::orderBy('created_at', 'desc')->get();
+
         return Inertia::render('Welcome', [
             'canLogin' => Route::has('login'),
             'canRegister' => Route::has('register'),
             'laravelVersion' => Application::VERSION,
             'phpVersion' => PHP_VERSION,
             'settings' => $settings,
-            // Only pass active schemes, might limit to top 3 or just meta later, but keep it available if needed
+            'landingSettings' => $landingSettings,
             'schemes' => Scheme::where('is_active', true)->orderBy('category')->orderBy('level')->get(),
+            'posts' => $posts,
+            'documents' => $documents,
         ]);
     }
 
@@ -65,6 +74,36 @@ class WelcomeController extends Controller
             'scheme' => $scheme,
             'detail' => $scheme->details ? (is_string($scheme->details) ? json_decode($scheme->details, true) : $scheme->details) : null,
             'settings' => $settings,
+        ]);
+    }
+
+    public function posts()
+    {
+        $posts = Post::where('is_published', true)->orderBy('created_at', 'desc')->get();
+        return Inertia::render('Post/Index', [
+            'canLogin' => Route::has('login'),
+            'canRegister' => Route::has('register'),
+            'posts' => $posts,
+        ]);
+    }
+
+    public function postShow($slug)
+    {
+        $post = Post::where('slug', $slug)->where('is_published', true)->firstOrFail();
+        return Inertia::render('Post/Show', [
+            'canLogin' => Route::has('login'),
+            'canRegister' => Route::has('register'),
+            'post' => $post,
+        ]);
+    }
+
+    public function documents()
+    {
+        $documents = Document::orderBy('created_at', 'desc')->get();
+        return Inertia::render('Document/Index', [
+            'canLogin' => Route::has('login'),
+            'canRegister' => Route::has('register'),
+            'documents' => $documents,
         ]);
     }
 }

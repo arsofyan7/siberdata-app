@@ -55,7 +55,55 @@ class SettingResource extends Resource
                     ->label('Email Resmi')
                     ->default('lspsiberdata@gmail.com'),
                 ]),
-            ]),
+            ])
+            ->visible(fn(Forms\Get $get) => $get('key') === 'about_page'),
+
+            Forms\Components\Section::make('Konten Landing Page Segments')
+            ->description('Kelola Statistik dan Logo Trust Badges')
+            ->schema([
+                Forms\Components\Repeater::make('value.stats')
+                ->label('Impact Counter (Statistik)')
+                ->schema([
+                    Forms\Components\TextInput::make('label')
+                    ->required()
+                    ->label('Label (Misal: Asesor Kompeten)'),
+                    Forms\Components\TextInput::make('targetValue')
+                    ->required()
+                    ->numeric()
+                    ->label('Angka Target (Misal: 50)'),
+                    Forms\Components\TextInput::make('suffix')
+                    ->label('Akhiran (Misal: +)'),
+                    // Using string for icon identifier in frontend mapping
+                    Forms\Components\Select::make('icon')
+                    ->options([
+                        'Award' => 'Penghargaan / Sertifikat (Award)',
+                        'Users' => 'Pengguna Muka (Users)',
+                        'ShieldCheck' => 'Perlindungan (ShieldCheck)',
+                        'FileText' => 'Dokumen (FileText)',
+                        'UserCircle' => 'User Biasa (UserCircle)'
+                    ])
+                    ->required()
+                    ->label('Ikon'),
+                ])
+                ->columns(2)
+                ->collapsible(),
+
+                Forms\Components\Repeater::make('value.partners')
+                ->label('Trust Badges (Mitra / Akreditasi)')
+                ->schema([
+                    Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->label('Nama Instansi (Misal: BNSP)'),
+                    Forms\Components\FileUpload::make('logo')
+                    ->image()
+                    ->directory('partners')
+                    ->required()
+                    ->label('Logo Instansi'),
+                ])
+                ->columns(2)
+                ->collapsible(),
+            ])
+            ->visible(fn(Forms\Get $get) => $get('key') === 'landing_page'),
         ]);
     }
 

@@ -13,6 +13,9 @@ Route::get('/', [WelcomeController::class , 'index'])->name('home');
 Route::get('/skema', [WelcomeController::class , 'schemes'])->name('scheme.index');
 Route::get('/skema/{slug}', [WelcomeController::class , 'show'])->name('scheme.detail');
 Route::get('/about', [WelcomeController::class , 'about'])->name('about');
+Route::get('/berita', [WelcomeController::class , 'posts'])->name('post.index');
+Route::get('/berita/{slug}', [WelcomeController::class , 'postShow'])->name('post.show');
+Route::get('/dokumen', [WelcomeController::class , 'documents'])->name('document.index');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\User::firstOrCreate(
+        $admin = \App\Models\User::firstOrCreate(
         ['email' => 'admin@siberdata.id'],
         [
             'name' => 'Admin Siberdata',
@@ -25,7 +25,13 @@ class DatabaseSeeder extends Seeder
         $this->call([
             SettingSeeder::class ,
             SchemeSeeder::class ,
+            RoleSeeder::class ,
         ]);
+
+        // Assign super_admin role
+        if (!$admin->hasRole('super_admin')) {
+            $admin->assignRole('super_admin');
+        }
 
         // Insert Dummy Posts
         $dummyPosts = [

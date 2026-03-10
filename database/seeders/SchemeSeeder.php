@@ -62,7 +62,7 @@ class SchemeSeeder extends Seeder
                 'code' => $scheme['code'],
                 'category' => $scheme['category'],
                 'level' => $scheme['level'],
-                'details' => $details,
+                'details' => json_encode($details),
             ]);
         }
     }

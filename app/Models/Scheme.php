@@ -5,10 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Activitylog\LogOptions;
 
 class Scheme extends Model
 {
-    use HasFactory, HasUuids;
+    use HasFactory, HasUuids, LogsActivity;
 
     public $incrementing = false;
     protected $keyType = 'string';
@@ -24,7 +26,19 @@ class Scheme extends Model
         'details',
     ];
 
-    protected $casts = [
-        'details' => 'array',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'details' => 'array',
+            'is_active' => 'boolean',
+        ];
+    }
+
+    public function getActivitylogOptions(): LogOptions
+    {
+        return LogOptions::defaults()
+            ->logFillable()
+            ->logOnlyDirty()
+            ->dontSubmitEmptyLogs();
+    }
 }

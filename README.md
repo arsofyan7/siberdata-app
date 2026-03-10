@@ -24,9 +24,11 @@ Platform ini memfasilitasi asesi (peserta) untuk melihat detail skema sertifikas
 ### ✨ Fitur Utama
 - **Landing Page Interaktif**: Desain UI modern dengan efek glassmorphism dan carousel dinamis.
 - **Katalog Skema Sertifikasi**: Fitur pencarian dan filter skema (Cyber & PDP) yang intuitif.
+- **Form Registrasi APL-01 (Multi-Step)**: Validasi dan pendaftaran sertifikasi interaktif untuk Asesi dengan _auto-select_ skema dan generate nomor registrasi otomatis (*REG/LSP-SD/...*).
+- **Notifikasi Email Otomatis**: Pengiriman progress pendaftaran & verifikasi via email (Mailable + Markdown template).
 - **Detail Skema Komprehensif**: Informasi profil, tugas, prasyarat, kompetensi, dan jenjang karir tiap skema.
 - **Tampilan "Tentang Kami" yang Profesional**: Menyajikan Visi, Misi, *Core Values* (SIBER), dan detail lokasi institusi.
-- **Admin Dashboard Terintegrasi**: Menggunakan **Filament v3** untuk manajemen Master Data Skema, Dokumen, Riwayat Sertifikasi, dan *Advanced Statistics Widget*.
+- **Dashboard Command Center (Asesi & Admin)**: Menggunakan **Filament v3** & **Inertia** untuk manajemen Master Data Skema, Dokumen, Riwayat Sertifikasi, dan *Advanced Statistics Widget*.
 
 ## 🚀 Teknologi yang Digunakan
 

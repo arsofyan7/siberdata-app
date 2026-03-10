@@ -77,10 +77,19 @@ watch([searchQuery, selectedType], () => {
                         <div class="h-6 w-px bg-slate-300 mx-2"></div>
                         
                         <div v-if="canLogin" class="flex items-center space-x-6">
-                            <Link v-if="$page.props.auth.user" :href="route('dashboard')" class="text-sm font-bold text-slate-600 hover:text-blue-700 transition-colors">Portal Admin</Link>
+                            <Link
+                                v-if="$page.props.auth.user"
+                                :href="route('dashboard')"
+                                class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition"
+                            >
+                                Dashboard <span aria-hidden="true">&rarr;</span>
+                            </Link>
                             <template v-else>
-                                <Link :href="route('login')" class="text-sm font-bold text-slate-600 hover:text-blue-700 transition-colors flex items-center group">
-                                    <UserCircle class="w-4 h-4 mr-1.5 group-hover:text-blue-700 text-slate-400 transition-colors" /> Login Asesor
+                                <Link
+                                    :href="route('login')"
+                                    class="rounded-full bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all hover:scale-105 active:scale-95"
+                                >
+                                    Log in
                                 </Link>
                             </template>
                         </div>
@@ -102,6 +111,23 @@ watch([searchQuery, selectedType], () => {
                     <Link href="/dokumen" class="block px-3 py-3 rounded-md text-base font-bold text-blue-700 bg-blue-50/50">Dokumen</Link>
                     <Link href="/berita" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-blue-700 hover:bg-slate-50">Berita</Link>
                     <Link href="/about" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-blue-700 hover:bg-slate-50">About</Link>
+                    <div class="py-6 flex flex-col gap-3">
+                        <Link
+                            v-if="$page.props.auth.user"
+                            :href="route('dashboard')"
+                            class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                        >
+                            Dashboard
+                        </Link>
+                        <template v-else>
+                            <Link
+                                :href="route('login')"
+                                class="-mx-3 block rounded-lg px-3 py-2.5 text-center text-base font-semibold leading-7 text-white bg-blue-600 hover:bg-blue-700"
+                            >
+                                Log in
+                            </Link>
+                        </template>
+                    </div>
                 </div>
             </div>
         </nav>

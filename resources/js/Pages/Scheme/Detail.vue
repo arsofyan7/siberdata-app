@@ -75,17 +75,20 @@ const tabs = [
                         <div class="h-6 w-px bg-slate-300 mx-2"></div>
                         
                         <div v-if="canLogin" class="flex items-center space-x-6">
-                            <Link v-if="$page.props.auth.user" :href="route('dashboard')" class="text-sm font-bold text-slate-600 hover:text-blue-700 transition-colors">
-                                Portal Admin
+                            <Link
+                                v-if="$page.props.auth.user"
+                                :href="route('dashboard')"
+                                class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition"
+                            >
+                                Dashboard <span aria-hidden="true">&rarr;</span>
                             </Link>
+
                             <template v-else>
-                                <Link :href="route('login')" class="text-sm font-bold text-slate-600 hover:text-blue-700 transition-colors flex items-center group">
-                                    <UserCircle class="w-4 h-4 mr-1.5 group-hover:text-blue-700 text-slate-400 transition-colors" />
-                                    Login Asesor
-                                </Link>
-                                <Link v-if="canRegister" :href="route('register')" class="inline-flex items-center justify-center px-5 py-2.5 border border-transparent text-sm font-bold rounded-xl text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5"
-                                      :class="isCyber ? 'bg-indigo-600 hover:bg-indigo-700' : 'bg-emerald-600 hover:bg-emerald-700'">
-                                    Portal Asesi
+                                <Link
+                                    :href="route('login')"
+                                    class="rounded-full bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all hover:scale-105 active:scale-95"
+                                >
+                                    Log in
                                 </Link>
                             </template>
                         </div>
@@ -113,19 +116,23 @@ const tabs = [
                     <div class="border-t border-slate-100 my-2 pt-2"></div>
                     
                     <div v-if="canLogin" class="space-y-1">
-                        <Link v-if="$page.props.auth.user" :href="route('dashboard')" @click="isMobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-bold text-slate-700 hover:text-blue-700 hover:bg-slate-50 transition-colors">
-                            Portal Admin
-                        </Link>
-                        <template v-else>
-                            <Link :href="route('login')" @click="isMobileMenuOpen = false" class="flex items-center px-3 py-3 rounded-md text-base font-bold text-slate-700 hover:text-blue-700 hover:bg-slate-50 transition-colors">
-                                <UserCircle class="w-5 h-5 mr-2 text-slate-400" />
-                                Login Asesor
+                        <div class="py-6 flex flex-col gap-3">
+                            <Link
+                                v-if="$page.props.auth.user"
+                                :href="route('dashboard')"
+                                class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                            >
+                                Dashboard
                             </Link>
-                            <Link v-if="canRegister" :href="route('register')" @click="isMobileMenuOpen = false" class="mt-4 block w-full text-center px-5 py-3 border border-transparent text-base font-bold rounded-xl text-white shadow-sm transition-colors"
-                                  :class="isCyber ? 'bg-indigo-600 hover:bg-indigo-700' : 'bg-emerald-600 hover:bg-emerald-700'">
-                                Portal Asesi
-                            </Link>
-                        </template>
+                            <template v-else>
+                                <Link
+                                    :href="route('login')"
+                                    class="-mx-3 block rounded-lg px-3 py-2.5 text-center text-base font-semibold leading-7 text-white bg-blue-600 hover:bg-blue-700"
+                                >
+                                    Log in
+                                </Link>
+                            </template>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -347,13 +354,13 @@ const tabs = [
                         </div>
 
                         <!-- CTA Button -->
-                        <button
-                            @click="handleDaftarClick"
+                        <Link
+                            :href="`/register-certification?scheme_id=${scheme.id}`"
                             class="w-full justify-center inline-flex items-center px-6 py-4 border border-transparent text-base font-bold rounded-xl text-white shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5"
                             :class="isCyber ? 'bg-indigo-600 hover:bg-indigo-700 shadow-indigo-500/30' : 'bg-emerald-600 hover:bg-emerald-700 shadow-emerald-500/30'"
                         >
                             Daftar Sertifikasi Sekarang
-                        </button>
+                        </Link>
                         
                         <p class="mt-4 text-xs text-slate-400 flex items-center justify-center">
                             <LockKeyhole class="w-3 h-3 mr-1" /> Transaksi aman melalui Portal Asesi

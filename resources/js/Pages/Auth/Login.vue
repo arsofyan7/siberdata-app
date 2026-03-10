@@ -89,6 +89,18 @@ const submit = () => {
                     Log in
                 </PrimaryButton>
             </div>
+
+            <div class="mt-6 text-center border-t border-gray-200 pt-6">
+                <p class="text-sm text-gray-600">
+                    Belum punya akun Asesi? 
+                    <Link
+                        :href="route('register')"
+                        class="font-medium text-blue-600 hover:text-blue-500 hover:underline transition"
+                    >
+                        Daftar disini
+                    </Link>
+                </p>
+            </div>
         </form>
     </GuestLayout>
 </template>
